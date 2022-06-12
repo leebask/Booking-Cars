@@ -36,8 +36,8 @@ function Account({ isMenuOpen, setIsMenuOpen }) {
   const loginAndUpdate = async (e) => {
     e.preventDefault()
     try {
-      await auth.currentUser.updatePassword(fields.password)
-      await auth.currentUser.updateEmail(fields.email)
+      if(fields.password)await auth.currentUser.updatePassword(fields.password)
+      
       await auth.currentUser.updateProfile({
         displayName: fields.name,
 
@@ -51,7 +51,8 @@ function Account({ isMenuOpen, setIsMenuOpen }) {
       
     }
     catch (e) {
-      alert("Cập nhật thất bại")
+      console.error(e)
+      alert("Cập nhật thất bại "+e.message)
     }
 
   }
@@ -101,19 +102,22 @@ const test = ()=>{
             onChange={handleChange('name')}
           />
           <TextField
+            disabled
             id="outlined-uncontrolled"
             label="Email"
             value={fields.email || ""}
             onChange={handleChange('email')}
+            autoComplete="off"
           />
          
          <TextField
-          //  disabled={fields.password}
+          //  disabled={!fields.password}
             id="outlined-uncontrolled"
             label="Password"
             type="password"
-            value={fields.password || ""}
+            // value={fields.password || ""}
             onChange={handleChange('password')}
+            autoComplete="off"
           />
           <Button variant="contained" onClick={loginAndUpdate}>Cập nhật</Button>
           {/* loginAndUpdate */}
