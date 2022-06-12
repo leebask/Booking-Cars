@@ -7,8 +7,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Box, CardActionArea, Modal } from '@mui/material';
 import './CarTour.css'
-import Mapbox from '../../mapbox';
+import Mapbox from '../../mapbox/mapbox';
 import Footer from '../../footer/Footer';
+import MapboxDirection from '../../mapbox/mapboxdirection';
+
 
 
 
@@ -100,7 +102,7 @@ function CarTour() {
                             {namePlace}
                         </Typography>
                         <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                            <Mapbox />
+                            <MapboxDirection />
                         </Typography>
                     </Box>
                 </Modal>

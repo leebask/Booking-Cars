@@ -13,7 +13,7 @@ function Connect() {
             {/* <i class="icon-cps-close"></i> */}
           </label>
           <div className="fab-wheel">
-            <Link to="/nhaxe" className="fab-action fab-action-1" rel="nofollow" target="_blank">
+            <Link to="/nhaxe" className="fab-action fab-action-1" rel="nofollow">
               <span className="fab-title">Tìm nhà xe</span>
               <div className="fab-button fab-button-1"><i className="icon-cps-local" /></div>
             </Link>
@@ -21,10 +21,10 @@ function Connect() {
               <span className="fab-title">Gọi trực tiếp</span>
               <div className="fab-button fab-button-2"><i className="icon-cps-phone" /></div>
             </a>
-            <a className="fab-action fab-action-3"  rel="nofollow" onClick={()=>alert("Chức năng chưa đi vào hoạt động")}>
+            {/* <a className="fab-action fab-action-3"  rel="nofollow" onClick={()=>alert("Chức năng chưa đi vào hoạt động")}>
               <span className="fab-title" >Chat ngay</span>
               <div className="fab-button fab-button-3"><i className="icon-cps-chat" /></div>
-            </a>
+            </a> */}
             <a className="fab-action fab-action-4" href="https://zalo.me/0336103086" target="_blank" rel="nofollow">
               <span className="fab-title">Chat trên Zalo</span>
               <div className="fab-button fab-button-4"><i className="icon-cps-chat-zalo" /></div>

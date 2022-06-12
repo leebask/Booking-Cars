@@ -9,7 +9,7 @@ import HeaderHomeAccount from './HeaderHomeAccount';
 import './Nhaxe.css'
 import Menu from '../header/Menu';
 
-import Mapbox from '../mapbox';
+import Mapbox from '../mapbox/mapbox';
 import Footer from '../footer/Footer';
 
 
